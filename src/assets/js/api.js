@@ -1,6 +1,7 @@
 
 export default {
   connectionInfo: {
-    getConnectionInfo: 'getConnectionInfo'
+    getConnectionInfo: 'getConnectionInfo',
+    getConnectionIpAddr: 'getConnectionIpAddr'
   }
 };

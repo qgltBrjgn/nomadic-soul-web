@@ -12,8 +12,7 @@ export default function (Vue) {
             // 请求类型设置
             let options = {emulateJSON: true};
             Vue.http.post(url, body, options).then(response => {
-              console.log(response);
-              callback(response.body.result);
+              callback(response.body);
             });
         },
     }

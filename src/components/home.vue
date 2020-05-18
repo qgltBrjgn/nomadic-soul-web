@@ -1,6 +1,9 @@
 <template>
   <div>
     home
+    <div>
+      <button @click="toMenuParent">menu_parent</button>
+    </div>
   </div>
 </template>
 
@@ -9,6 +12,11 @@ export default {
   name: 'home',
   props: {
     msg: String
+  },
+  methods: {
+    toMenuParent () {
+      this.$router.push('/menu_parent')
+    }
   }
 }
 </script>
