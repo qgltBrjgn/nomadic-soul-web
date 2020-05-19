@@ -34,7 +34,7 @@ export default {
 <style scoped>
   .routerContainer {
     border: 1px solid green;
-    height: 50vh;
+    min-height: 50vh;
     margin: 0;
   }
 </style>

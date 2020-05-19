@@ -10,6 +10,7 @@
             <p v-if="nation !== ''">{{nation}}</p>
             <p v-if="province !== ''">{{province}}</p>
             <p v-if="city !== ''">{{city}}</p>
+            <p v-if="district !== ''">{{district}}</p>
             <button @click="showConnectionUrlInfo">showConnectionUrlInfo</button>
         </div>
     </div>
@@ -24,7 +25,8 @@
                 ipStr: '',
                 province: '',
                 city: '',
-                nation: ''
+                nation: '',
+                district: ''
             };
         },
         methods: {
@@ -39,9 +41,10 @@
                 this._UTIL.fpost(this._API.connectionInfo.getConnectionIpAddr, {}, function (data) {
                     that.ipStr = data.ipStr;
                     if (data.addStr.status === 0) {
-                        that.province = data.addStr.result.add_info.province;
-                        that.city = data.addStr.result.add_info.city;
-                        that.nation = data.addStr.result.add_info.nation;
+                        that.province = data.addStr.result.ad_info.province;
+                        that.city = data.addStr.result.ad_info.city;
+                        that.nation = data.addStr.result.ad_info.nation;
+                        that.district = data.addStr.result.ad_info.district;
                     }
                 });
             }
